@@ -1,0 +1,26 @@
+@model Bootcamp.MVC.NET.Models.Entities.User
+@{
+  ViewData["Title"] = "Create User";
+}
+
+<h1 style="text-align:center;">@ViewData["Title"]</h1>
+
+<form action="InputData" method="post">
+  <div class="mb-3">
+    <label for="" class="form-label">Username</label>
+    <input type="text" class="form-control" id="username" asp-for="Username">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" asp-for="Password">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Tipe</label>
+    @* <input type="text" class="form-control" id="tipe" asp-for="Tipe"> *@
+    <select class="form-select" id="tipe" asp-for="Tipe">
+      <option value="penjual">Penjual</option>
+      <option value="pembeli">Pembeli</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
